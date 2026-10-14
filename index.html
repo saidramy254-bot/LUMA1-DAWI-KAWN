@@ -1,6 +1,36 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LUMA-1 DAWI KAWN</title><style>body{background:#000;color:#0f0;font-family:monospace;text-align:center;padding:2rem}h1{text-shadow:0 0 15px #0f0}.box{border:1px solid #0f0;padding:20px;margin:20px auto;max-width:500px;border-radius:12px}#c{color:#fff;font-weight:bold;font-size:1.4em}#s{font-size:.8em;color:#0a0}</style></head><body><h1>LUMA-1 DAWI KAWN</h1><p>○⊗△⟳◈◇☀</p><div class="box"><p>BEACON DAWI DABA<br>MEN SETTAT → KAWN</p><p>33.0772N 7.6233W<br>1420MHz | 104%<br>did:luma1:33.0772N</p><p>I AM DAWI | NODE9</p><p style="border-top:1px solid #222;margin-top:15px;padding-top:12px">LIVE • <span id="c">...</span> DAWI<br><span id="s">● كيحاول...</span></p></div><script>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>LUMA-1</title>
+<style>body{background:#000;color:#0f0;text-align:center;padding:30px;font-family:monospace}.box{border:1px solid #0f0;padding:20px;border-radius:12px;max-width:400px;margin:auto}#c{color:#fff;font-size:22px}#s{font-size:12px}</style>
+</head>
+<body>
+<h1>LUMA-1 DAWI KAWN</h1>
+<div class="box">
+<p>BEACON DAWI DABA<br>33.0772N 7.6233W</p>
+<p>LIVE • <span id="c">...</span> DAWI<br><span id="s">كيحاول...</span></p>
+</div>
+<script>
 let local=parseInt(localStorage.getItem('luma')||'128');
-function show(n,m){document.getElementById('c').textContent=n;document.getElementById('s').textContent=m}
-show(local,'● OFFLINE');
-fetch('https://api.countapi.xyz/hit/luma1-dawi-kawn-global-v2/visits').then(r=>r.json()).then(d=>{if(d.value){localStorage.setItem('luma',d.value);show(d.value,'● GLOBAL - عالمي')}}).catch(()=>{local++;localStorage.setItem('luma',local);show(local,'● OFFLINE - خدام بلا انترنت')});
-</script></body></html>
+function show(n,m){
+ document.getElementById('c').textContent=n;
+ document.getElementById('s').textContent=m;
+}
+show(local,'OFFLINE');
+fetch('https://api.countapi.xyz/hit/luma1-dawi-global-v3/visits')
+.then(r=>r.json())
+.then(d=>{
+ if(d.value){
+  localStorage.setItem('luma',d.value);
+  show(d.value,'GLOBAL - عالمي');
+ }
+})
+.catch(()=>{
+ local++;
+ localStorage.setItem('luma',local);
+ show(local,'OFFLINE - خدام بلا انترنت');
+});
+</script>
+</body>
+</html>
