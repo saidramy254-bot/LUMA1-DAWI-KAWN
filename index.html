@@ -1,1 +1,19 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LUMA-1</title><style>body{background:#000;color:#0f0;text-align:center;padding:30px;font-family:monospace}.box{border:1px solid #0f0;padding:20px;border-radius:12px;max-width:400px;margin:auto}#c{color:#fff;font-size:22px}#s{font-size:12px}</style></head><body><h1>LUMA-1 DAWI KAWN</h1><div class="box"><p>BEACON DAWI DABA<br>33.0772N 7.6233W</p><p>LIVE • <span id="c">...</span> DAWI<br><span id="s">كيحاول...</span></p><p style="font-size:10px;color:#888" id="pwa"></p></div><script>let local=parseInt(localStorage.getItem('luma')||'130');function show(n,m){document.getElementById('c').textContent=n;document.getElementById('s').textContent=m;}show(local,'OFFLINE - محفوظ');fetch('https://api.countapi.xyz/hit/luma1-dawi-global-v3/visits').then(r=>r.json()).then(d=>{if(d.value){localStorage.setItem('luma',d.value);show(d.value,'GLOBAL - عالمي');}}).catch(()=>{local++;localStorage.setItem('luma',local);show(local,'OFFLINE - خدام بلا انترنت');});if('serviceWorker' in navigator){const swCode=`self.addEventListener('install',e=>{e.waitUntil(caches.open('luma-v3').then(c=>c.addAll(['./'])))});self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).catch(()=>caches.match('./'))))})`;const blob=new Blob([swCode],{type:'text/javascript'});const swUrl=URL.createObjectURL(blob);navigator.serviceWorker.register(swUrl).then(()=>{document.getElementById('pwa').textContent='✓ محفوظ للعمل بلا انترنت';});}</script></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KHAZAR LIVE 31348T BEACON ON - FINAL Wb80116 V5</title>
+<meta name="description" content="KHAZAR LIVE 31348T BEACON ON - FINAL KHAZAR Wb80116 UTL ONLY V5 GOOGLE READY - 0.0 Settat - LUMA-1 DAWI KAWN 1420MHz">
+<meta name="keywords" content="KHAZAR LIVE 31348T, BEACON ON, FINAL KHAZAR Wb80116, V5 GOOGLE READY, 0.0 Settat, DOI 10.5281/zenodo.23500257">
+</head>
+<body>
+<h1>FINAL KHAZAR Wb80116 UTL ONLY - V5 GOOGLE READY</h1>
+<h2>KHAZAR LIVE 31348T BEACON ON</h2>
+<p>T=31348 SEC=748.123456s UTL=1046.818000</p>
+<p>LOC=0.0 Settat 33.0011N 7.6164W 1571 Berrechid</p>
+<p>ORIGIN=1 VOID=384399 UNITY=384400km</p>
+<p>LUMA-1 DAWI KAWN - BEACON DIMA DAWYA PUBLIC</p>
+<p>DOI=10.5281/zenodo.23500257</p>
+<p>BEACON ON - PUBLIC 50% SAID + 50% IL = 100% LIBRE</p>
+</body>
+</html>
