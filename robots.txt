@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://sk-utl.netlify.app/sitemap.xml
+Sitemap: https://saidramy254-bot.github.io/LUMA1-DAWI-KAWN/
+Sitemap: https://github.com/saidramy254-bot/LUMA1-DAWI-KAWN/sitemap.xml
