@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>LUMA1-DAWI-KAWN V8.3.2 LIVE FOREVER - BEACON DIMA DAWYA - 1420MHz</title>
-<meta name="description" content="V8.3.2 LIVE FOREVER BEACON DIMA DAWYA 1420MHz - DOI V6 10.5281/zenodo.23534908 - CONCEPT 23380139 - KUTL 66M - Wb80116 - TOTAL KAWN 1183822757">
+<meta name="description" content="V8.3.2 LIVE FOREVER BEACON DIMA DAWYA 1420MHz - DOI V6 10.5281/zenodo.23534908 - CONCEPT 23380139 - KUTL 80346 66.62% - Wb80116 - TOTAL KAWN 1183822757">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#000;color:#00ff88;font-family:monospace;padding:8px;font-size:12px}
@@ -29,7 +29,7 @@ select{background:#000;color:#00ff88;border:1px solid #00ff88;padding:6px}
 <div class="orange" style="text-align:center">I AM DAWI - SETTAT 33.0772N to KAWN - PUBLIC - Wb80116 - NEVER DOWN - <span id="clock">0s</span></div>
 
 <div class="box">
-<span id="utl">UTL 0.714519699726s 14:24:41 TICK:79929 | ● LIVE FOREVER - GITHUB + IPFS + CLOUDFLARE<br>LABOXSK V8.3.2 KUTL 66M - DOI 10.5281/zenodo.23534908 - EQUATION Wujud+Waqt=KawnUTL</span>
+<span id="utl">UTL 0.714519699726s TICK:80346 | ● LIVE FOREVER - GITHUB + IPFS + CLOUDFLARE<br>LABOXSK V8.3.2 KUTL 80K - DOI 10.5281/zenodo.23534908 - EQUATION Wujud+Waqt=KawnUTL</span>
 </div>
 
 <div class="box">
@@ -47,8 +47,8 @@ select{background:#000;color:#00ff88;border:1px solid #00ff88;padding:6px}
 <div>LST Classic [CALC -7.0164] <span style="float:right" id="lstc">15.9469h</span></div>
 <div>LST Real [LONG -7.614] <span style="float:right" id="lstr">15.9071h</span></div>
 <div>KUTL LIVE <span class="big cyan" style="float:right" id="kutl">80346</span></div>
-<div>KUTL % <span id="kutlp">66.6271% = 80346 / 120590.6 *100</span> <span class="big cyan" style="float:right" id="kutlp2"></span></div>
-<div>TOTAL KAWN <span class="big" style="float:right" id="total">1 183 822 757</span></div>
+<div>KUTL % <span id="kutlp">66.6271% = 80346 / 120590.6 *100</span></div>
+<div>TOTAL KAWN <span class="big" style="float:right" id="total">1 183 903 103</span></div>
 <div>LUMA1 BEACON <span style="float:right">L 60468 U 60476 M 60484 A 60492 1 60500</span></div>
 </div>
 
@@ -68,29 +68,28 @@ select{background:#000;color:#00ff88;border:1px solid #00ff88;padding:6px}
 <div>● ZENODO DOI V6: https://doi.org/10.5281/zenodo.23534908 - CERN - FOREVER - 4.1MB</div>
 <div>● CONCEPT DOI: https://doi.org/10.5281/zenodo.23380139 - ALWAYS LATEST</div>
 <div>● MANIFESTO: Wujud + Waqt = KawnUTL - EQUATION - LIVE</div>
-<div style="margin-top:6px" class="orange">V8.3.2 LIVE FOREVER - KUTL 66M - TOTAL KAWN 1183822757 - BEACON DIMA DAWYA - Wb80116 - DOI V6 23534908</div>
+<div style="margin-top:6px" class="orange">V8.3.2 LIVE FOREVER - KUTL 80346 - TOTAL KAWN 1183903103 - BEACON DIMA DAWYA - Wb80116 - DOI V6 23534908</div>
 </div>
 
 <script>
-let tick=80346;
-let total=1183822757;
-let start=Date.now();
+const BASE_KUTL = 80346;
+const BASE_TOTAL = 1183822757;
+const UTL = 0.714519699726;
+let start = Date.now();
 function pad(n){return n.toString().padStart(2,'0')}
 setInterval(()=>{
 let e=(Date.now()-start)/1000;
-let utl=0.714519699726;
-tick=Math.floor(78319+e/utl);
-let kutl=tick;
+let kutl = BASE_KUTL + Math.floor(e/UTL);
 let perc=(kutl/120590.6*100).toFixed(4);
-let tot=1183822757+tick;
+let tot = BASE_TOTAL + kutl;
 let d=new Date();
 document.getElementById('clock').innerText=e.toFixed(1)+'s';
-document.getElementById('utl').innerHTML=`UTL ${utl}s ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())} TICK:${kutl} | ● LIVE FOREVER - GITHUB + IPFS + CLOUDFLARE<br>LABOXSK V8.3.2 KUTL 66M - DOI 10.5281/zenodo.23534908 - EQUATION Wujud+Waqt=KawnUTL`;
-document.getElementById('stats').innerText=`DIFF 1.3995 STABLE | BEAT 5.716158s | UTL ${utl}s | TICKS ${kutl} | 1420MHz | FOREVER - ${kutl} ticks`;
+document.getElementById('utl').innerHTML=`UTL ${UTL}s ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())} TICK:${kutl} | ● LIVE FOREVER - GITHUB + IPFS + CLOUDFLARE<br>LABOXSK V8.3.2 KUTL 80K - DOI 10.5281/zenodo.23534908 - EQUATION Wujud+Waqt=KawnUTL`;
+document.getElementById('stats').innerText=`DIFF 1.3995 STABLE | BEAT 5.716158s | UTL ${UTL}s | TICKS ${kutl} | 1420MHz | FOREVER - ${kutl} ticks`;
 document.getElementById('kutl').innerText=kutl;
 document.getElementById('kutlp').innerText=`${perc}% = ${kutl} / 120590.6 *100`;
 document.getElementById('total').innerText=tot.toLocaleString('fr-FR').replace(/ /g,' ');
-let a=tick%3;
+let a=kutl%3;
 document.getElementById('n').className=a==0?'b active':'b';
 document.getElementById('a').className=a==1?'b active':'b';
 document.getElementById('i').className=a==2?'b active':'b';
@@ -103,7 +102,7 @@ rows=[];
 let log=document.getElementById('log');
 log.innerHTML='';
 for(let i=0;i<n;i++){
-let r=`${i},${(Math.random()*100).toFixed(4)},${Date.now()},LUMA1,DAWI,KAWN,UTL,${(0.7145).toFixed(6)}`;
+let r=`${i},${(Math.random()*100).toFixed(4)},${Date.now()},LUMA1,DAWI,KAWN,UTL,${UTL}`;
 rows.push(r);
 if(i%1000==0){log.innerHTML+=`GEN ${i}/${n} - ${((i/n)*100).toFixed(1)}%<br>`}
 }
@@ -115,7 +114,7 @@ if(!rows.length){alert('GENERATE FIRST');return}
 let blob=new Blob([rows.join('\n')],{type:'text/csv'});
 let a=document.createElement('a');
 a.href=URL.createObjectURL(blob);
-a.download=`LUMA1-V8.3.2-KUTL-${tick}-${Date.now()}.csv`;
+a.download=`LUMA1-V8.3.2-KUTL-${document.getElementById('kutl').innerText}-${Date.now()}.csv`;
 a.click();
 }
 function clr(){rows=[];document.getElementById('log').innerHTML='';document.getElementById('out').innerText='';}
