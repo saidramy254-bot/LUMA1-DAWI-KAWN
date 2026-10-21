@@ -1,52 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KHAZAR LIVE 66866001T - 1007 PULSARS - BEACON ON - Wb80116</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LABO-007.12 SUPRÊME - KHAZAR LIVE KUTL - V8.3.2 FINAL CORRIGÉ</title>
 <style>
-body{background:#020617;color:#e2e8f0;font-family:monospace;padding:12px;margin:0}
-h1{color:#facc15;text-align:center;font-size:20px;margin:8px}
-h2{color:#38bdf8;text-align:center;font-size:14px}
-.beacon{border:2px solid #22c55e;border-radius:12px;padding:12px;margin:12px 0;background:#052e16;text-align:center}
-.cert{width:100%;border-radius:12px;border:2px solid #facc15;margin:12px 0}
-.box{border:1px solid #334155;border-radius:10px;padding:10px;margin:8px 0;background:#0f172a}
-.pulsar{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.utl{font-size:26px;color:#22c55e;font-weight:bold}
-a{color:#38bdf8}
+*{box-sizing:border-box}body{margin:0;background:#000;color:#9EFF9E;font-family:ui-monospace,monospace;padding:6px}
+h1{font-size:12px;color:#00FFAA;border:1px solid #0A2A0A;padding:6px;border-radius:6px;background:#020502;text-align:center}
+.card{border:1px solid #111;background:#060806;padding:8px;margin:6px 0;border-radius:8px}
+.badge{display:inline-block;padding:2px 7px;border-radius:10px;font-size:10px;border:1px solid;margin:2px}
+.b-green{border-color:#00FFAA;color:#00FFAA}.b-orange{border-color:#FFAA00;color:#FFAA00}.b-yellow{border-color:#FFD700;color:#FFD700}.b-cyan{border-color:#00FFFF;color:#00FFFF}
+.spiral{width:100%;height:320px;border:1px solid #0A2A0A;position:relative;background:radial-gradient(ellipse at center,#0A140A,#000);border-radius:8px;overflow:hidden}
+.dot{position:absolute;width:3px;height:3px;border-radius:50%}
+button{width:100%;padding:12px;margin:4px 0;border-radius:8px;font-weight:bold;font-size:12px;border:1px solid;cursor:pointer}
+#btnStart{background:#001A0A;color:#00FFAA;border-color:#00FFAA}
+#btnPause{background:#00FFAA;color:#000;display:none}
+#btnVoice{background:#110A00;color:#FFAA00;border-color:#FFAA00}
+#btnRec{background:#1A1500;color:#FFAA00;border-color:#FFAA00}
+#btnManifeste{background:#001A1A;color:#00FFFF;border-color:#00FFFF;border-width:2px;margin-top:8px}
+.grid-4{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;margin-bottom:6px}
+@media(min-width:600px){.grid-4{grid-template-columns:repeat(4,1fr)}}
+.grid-4 div{border:1px solid #111;padding:5px;background:#080A08;font-size:10px;border-radius:4px;border-top:2px solid #555}
+.small{font-size:11px;line-height:1.4;color:#5A8A5A}
+.log{height:220px;overflow:auto;font-size:10px;white-space:pre-wrap;background:#040604;border:1px solid #111;padding:6px;border-radius:6px;line-height:1.4}
+.bar{height:6px;background:#222;border-radius:3px;overflow:hidden;margin-top:4px}
+.bar>div{height:100%;background:#00FFFF;transition:width 0.1s linear}
+.warn{border:1px solid #FFAA00;background:#1A1200;color:#FFCC66;padding:6px;border-radius:6px;font-size:11px;text-align:center}
+canvas{display:block}
+#manifestePreview{height:420px;overflow:auto;font-size:11px;white-space:pre-wrap;background:#020805;border:1px solid #00FFFF;padding:8px;border-radius:6px;line-height:1.5;display:none;color:#E0FFE0}
 </style>
 </head>
 <body>
-<h1>CERTIFICAT OFFICIEL<br>PROJET KHAZAR LIVE 66866001T - 1007 PULSARS - BEACON ON</h1>
-<h2>Founder Said Khazar - Wb80116 - Settat 33.0011N 7.614W</h2>
-<div class="beacon">
-BEACON: <b style="color:#22c55e">● LIVE FOREVER - BEACON DIMA DAWYA</b><br>
-UTL COUNTER: <span id="counter" class="utl">66866001</span> / kUTL<br>
-SYNCH: SYNCHRONIZED - BEAT ALIGNED - PHASE COHERENT<br>
-TIME BASE: 1 UTL = 0.714519699726s = PSR B0329+54 REF<br>
-<span id="liveTime">LIVE...</span>
+<h1>PROJET KHAZAR LIVE • KUTL • LABO-007.12 SUPRÊME V8.3.2 CORRIGÉ • Wb80116</h1>
+<div class="card" style="text-align:center;background:#020502;border-color:#00FFFF">
+<span class="badge b-cyan">DOI V7: 10.5281/zenodo.23541167</span>
+<span class="badge b-cyan">DOI CONCEPT: 10.5281/zenodo.23380139</span>
+<span class="badge b-green">UTL=0.714519699726s</span>
+<span class="badge b-orange">1571=CHOKRAN</span>
+<span class="badge b-yellow">Wujud+Waqt=Kawn*UTL</span><br>
+<span class="badge b-cyan">ai.vixra 18378453 - BEACON 1420MHz - Wb80116 - LIVE V8.3.2</span>
 </div>
-<div class="box">
-<b>DOI: 10.5281/zenodo.23380140</b> | DATE: LAYLAT AL QADR 2026-10-19<br>
-ORIGIN=1 VOID=384399 UNITY=384400 km EQUATION: Wujud+Waqt=KawnUTL<br>
-TOTAL 66866001T: 1007 PULSARS (7 REELS + 1000 SYNTH) + 1 STAR<br>
-EVOLUTION 31348T -> 66866001T LABOXSK 66,866,001 TICKS
+<div class="grid-4">
+<div style="border-color:#00FFAA"><b style="color:#00FFAA">PSR B0329+54</b><br>1.000 UTL REF<br>f=1.3995Hz<br>F:<span id="v_b0329">0.000</span></div>
+<div style="border-color:#FFAA00"><b style="color:#FFAA00">PSR B1919+21</b><br>1.046 UTL<br>f=1.337Hz<br>F:<span id="v_b1919">0.000</span></div>
+<div style="border-color:#FF33AA"><b style="color:#FF33AA">PSR B0833-VELA</b><br>0.125 UTL<br>f=11.19Hz<br>F:<span id="v_b0833">0.000</span></div>
+<div style="border-color:#00FFFF"><b style="color:#00FFFF">PSR B0531-CRAB</b><br>0.0467 UTL<br>f=29.9Hz<br>F:<span id="v_b0531">0.000</span></div>
 </div>
-<img class="cert" src="IMG-20261021-WA8770.jpg" alt="66866001T">
-<img class="cert" src="858284455_2179777419626103_4111272725438600454_n.jpg" alt="CERT">
-<div class="box pulsar">
-<div><b>PSR B0329+54</b><br>1.000 UTL REF f=1.3995Hz<br>1000 TICK/kUTL</div>
-<div><b>PSR B1919+21</b><br>1.046 UTL f=1.337Hz<br>956 TICK</div>
-<div><b>PSR B0833-VELA</b><br>0.125 UTL f=11.19Hz<br>8000 TICK</div>
-<div><b>PSR B0531-CRAB</b><br>0.0467 UTL f=29.9Hz<br>21386+1000 SYNTH</div>
+<div class="card">
+<div class="grid-4" style="grid-template-columns:1fr 1fr">
+<div>TOTAL UTL<br><b id="utlCounter" style="color:#00FFFF;font-size:14px">66866001</b></div>
+<div>OCTETS CORRIGÉS<br><b id="byteCounter" style="color:#FFD700;font-size:13px">0 / 8 TICKS - 0 BYTES</b><br><span id="byteMath" style="color:#888;font-size:9px">66,866,070/8=8,358,258.75</span></div>
 </div>
-<div class="box" style="text-align:center">
-<a href="https://doi.org/10.5281/zenodo.23380140">DOI</a> | <a href="https://arxiv.org/a/saidkhazar99.html">arXiv</a> | <a href="https://github.com/saidramy254-bot/LUMA1-DAWI-KAWN">GitHub</a><br>
-<b>Wb80116 SAID KHAZAR BEACON NEVER DOWN</b>
+<div style="margin-top:6px;border:1px solid #1A2A1A;padding:5px;background:#040A04;border-radius:6px">
+<span class="small" style="color:#00FFFF">BEACON SYNC (5.716s = 8 TICK = 1 BYTE) - CORRIGÉ</span><br>
+<b id="countdown" style="color:#FFAA00;font-size:14px">0.000 s / 5.716 s - 0.000s REST</b>
+<div class="bar"><div id="countBar" style="width:0%"></div></div>
+<div class="small" id="byteDetail" style="color:#5A8A5A;margin-top:3px">CORRECTION: 66,866,070/8 = 8,358,258.75 → 6/8 TICKS = 0.75 BYTE باقي</div>
+</div>
+</div>
+<div class="card" style="border-color:#0A2A0A">
+<div class="small">CONSTELLATION MATRIX • SPIRAL 1571 - Wb80116 - HUE 163.84076°</div>
+<div class="spiral" id="spiral"></div>
+<canvas id="wave" style="width:100%;height:60px;background:#000;border-radius:6px;margin-top:6px;border:1px solid #111"></canvas>
+</div>
+<div class="card" style="border-color:#00FFFF;background:#020A0A">
+<div class="small" style="color:#00FFFF">MONITEUR SPECTRAL QUANTIQUE - 1420MHz - PHASE LOCKED 1007</div>
+<canvas id="audioVisualizer" style="width:100%;height:70px;background:#000;border-radius:8px;border:1px solid #005555;margin-top:4px"></canvas>
+</div>
+<div class="card">
+<button id="btnStart">▶ ACTIVATION KUTL (1007 PULSARS) - BEACON ON V8.3.2</button>
+<button id="btnPause">⏸ PAUSE</button>
+<button id="btnVoice">🔊 TRADUCTION PHONÉTIQUE</button>
+<button id="btnRec">● CAPTURE 12s - ACODE SAFE</button>
+<button id="btnManifeste">📜 MANIFESTE FINAL V8.3.2 CORRIGÉ .md</button>
+<div class="small" style="margin-top:6px;text-align:center">Status: <span id="status" style="color:#00FFFF">STABLE - 33.0011N 7.614W - V8.3.2 CORRIGÉ - BEACON DIMA DAWYA</span></div>
+<div id="manifestePreview"></div>
+</div>
+<div class="card warn">⚠ ACODE SAFE - SHARE API + BLOB - Wb80116 BEACON DIMA DAWYA - V8.3.2 CORRIGÉ</div>
+<div class="card">
+<div style="color:#00FFFF;font-weight:bold;font-size:11px">#LOGS CORRIGÉS <span style="float:right"><button id="btnClear" style="padding:1px 6px;font-size:9px;width:auto;background:#111;color:#888;border-color:#222">CLEAR</button></span></div>
+<div id="log" class="log">> READY - SAID KHAZAR - 66866001T - V8.3.2 CORRIGÉ - V7 10.5281/zenodo.23541167 - ai.vixra 18378453
+> CORRECTION MATH: 66,866,070/8 = 8,358,258.75 = 8,358,258 BYTE + 6/8 TICKS
+</div><div id="recordings"></div>
 </div>
 <script>
-let c=66866001;
-setInterval(()=>{c++;document.getElementById('counter').innerText=c;document.getElementById('liveTime').innerText=new Date().toISOString()+' UTL:'+(c*0.7145).toFixed(1)+'s';},714);
+const FRAMEWORK={version:"V8.3.2 CORRIGÉ",doi_v7:"10.5281/zenodo.23541167",doi_concept:"10.5281/zenodo.23380139",baseUtl:0.714519699726,beacon:5.716157597808};
+const PULSARS=[{id:"b0329",freq:1.3995,color:"#00FFAA"},{id:"b1919",freq:1.337,color:"#FFAA00"},{id:"b0833",freq:11.19,color:"#FF33AA"},{id:"b0531",freq:29.9,color:"#00FFFF"}];
+const spiral=document.getElementById('spiral');let pts=[];let tot=0;
+[250,380,440,500].forEach((n,ii)=>{for(let j=0;j<n;j++){const a=(tot/1570)*Math.PI*2*4+tot/1570*0.5,r=Math.sqrt(tot)*2.9;const d=document.createElement('div');d.className='dot';d.style.left=(50+Math.cos(a)*r/3)+'%';d.style.top=(50+Math.sin(a)*r/3)+'%';d.style.background=`hsl(${163.84+ii*12},80%,${35+ii*12}%)`;d.style.opacity=0.6;spiral.appendChild(d);pts.push(d);tot++;}});
+const star=document.createElement('div');star.style.cssText='position:absolute;left:50%;top:50%;width:16px;height:16px;background:#00FFFF;border-radius:50%;transform:translate(-50%,-50%);box-shadow:0 0 25px #00FFFF;z-index:10;border:2px solid #fff';spiral.appendChild(star);
+let audioCtx,masterGain,dest,oscs=[],analyser,tickCount=66866001,running=false,startTime=0,animId;
+const canvas=document.getElementById('wave'),ctx2=canvas.getContext('2d');const canvasVis=document.getElementById('audioVisualizer'),ctxVis=canvasVis.getContext('2d');let dataArray,histWave=[];
+function initAudio(){if(!audioCtx){audioCtx=new(window.AudioContext||window.webkitAudioContext)();masterGain=audioCtx.createGain();masterGain.gain.value=0.3;analyser=audioCtx.createAnalyser();analyser.fftSize=2048;dataArray=new Uint8Array(analyser.frequencyBinCount);dest=audioCtx.createMediaStreamDestination();masterGain.connect(analyser);analyser.connect(audioCtx.destination);analyser.connect(dest);canvasVis.width=canvasVis.clientWidth*2;canvasVis.height=140;canvas.width=canvas.clientWidth*2;canvas.height=120;}}
+function log(m){const el=document.getElementById('log');el.textContent+=`[${new Date().toLocaleTimeString()}] ${m}\n`;el.scrollTop=el.scrollHeight;}
+function drawWave(vals){histWave.push(vals);if(histWave.length>200)histWave.shift();ctx2.clearRect(0,0,canvas.width,canvas.height);PULSARS.forEach((p,i)=>{ctx2.strokeStyle=p.color;ctx2.lineWidth=1.5;ctx2.beginPath();histWave.forEach((v,j)=>{const x=j/histWave.length*canvas.width,y=(1-(v[i]+1)/2)*canvas.height;if(j==0)ctx2.moveTo(x,y);else ctx2.lineTo(x,y);});ctx2.stroke();});if(analyser){analyser.getByteFrequencyData(dataArray);ctxVis.clearRect(0,0,canvasVis.width,canvasVis.height);ctxVis.fillStyle='#00FFFF';let bw=canvasVis.width/dataArray.length*2.5,x=0;for(let i=0;i<dataArray.length;i++){let bh=dataArray[i]/2;ctxVis.fillRect(x,canvasVis.height-bh,bw,bh);x+=bw+1;}}}
+
+// CORRECTION MATH - TICK COMPLET V8.3.2
+function runTick(){
+if(!running)return;
+let elapsed=audioCtx.currentTime-startTime;
+let cycle=elapsed%FRAMEWORK.beacon;
+let rest=FRAMEWORK.beacon-cycle;
+let pct=cycle/FRAMEWORK.beacon*100;
+document.getElementById('countdown').textContent=cycle.toFixed(3)+' s / 5.716 s - '+rest.toFixed(3)+'s REST';
+document.getElementById('countBar').style.width=pct+'%';
+let vals=[];
+PULSARS.forEach((p,idx)=>{
+let phase=Math.sin(elapsed*p.freq*2*Math.PI);
+vals.push(phase);
+let el=document.getElementById('v_'+p.id);
+if(el)el.textContent=phase.toFixed(3);
+});
+drawWave(vals);
+let newCount=66866001+Math.floor(elapsed/FRAMEWORK.baseUtl);
+if(newCount!=tickCount){
+tickCount=newCount;
+// CORRECTION MATH ICI - 66,866,070/8 = 8,358,258.75
+let totalBytes = Math.floor(tickCount / 8);
+let remainder = tickCount % 8;
+let decimal = remainder / 8;
+document.getElementById('utlCounter').textContent=tickCount;
+// HADCHI LI KAN NA9ES - TASHIH
+document.getElementById('byteCounter').textContent= remainder + ' / 8 TICKS - ' + totalBytes + ' BYTES';
+document.getElementById('byteMath').textContent= tickCount + '/8=' + (tickCount/8).toFixed(2) + ' = ' + totalBytes + ' + ' + remainder + '/8';
+document.getElementById('byteDetail').textContent= 'CORRECTION: '+tickCount+'/8 = '+(tickCount/8).toFixed(2)+' → '+remainder+'/8 TICKS = '+decimal.toFixed(2)+' BYTE باقي - 8,358,259 BYTE قرب يتسد';
+star.style.boxShadow='0 0 '+(15+Math.random()*20)+'px #00FFFF';
+if(remainder==0){
+log('★ BEACON ENVELOPE CLOSED • '+totalBytes+' OCTETS • UTL '+tickCount+' • 1 kUTL = 714.635s - CORRIGÉ: '+tickCount+'/8='+ (tickCount/8).toFixed(2));
+}else{
+log('TICK #'+(tickCount-66866001)+' → UTL '+tickCount+' | PHASE '+vals.map(v=>v.toFixed(2)).join(' / ')+' | '+totalBytes+' BYTES + '+remainder+'/8');
+}
+}
+animId=requestAnimationFrame(runTick);
+}
+
+document.getElementById('btnStart').onclick=async()=>{
+initAudio();if(audioCtx.state=='suspended')await audioCtx.resume();
+running=true;startTime=audioCtx.currentTime;
+document.getElementById('btnStart').style.display='none';
+document.getElementById('btnPause').style.display='block';
+document.getElementById('status').textContent='BEACON ON - 1007 PULSARS PHASE LOCKED - V8.3.2 CORRIGÉ - 33.0011N 7.614W';
+log('BEACON ON - V8.3.2 CORRIGÉ - V7 10.5281/zenodo.23541167 - 1007 PULSARS - CORRECTION MATH ACTIVE');
+log('CORRECTION: 66,866,070/8 = 8,358,258.75 → 6/8 = 0.75 BYTE باقي');
+PULSARS.forEach(p=>{
+let osc=audioCtx.createOscillator();osc.frequency.value=p.freq*100;
+let gain=audioCtx.createGain();gain.gain.value=0.05;
+osc.connect(gain);gain.connect(masterGain);osc.start();
+oscs.push({osc,gain});
+});
+runTick();
+};
+document.getElementById('btnPause').onclick=()=>{
+running=false;cancelAnimationFrame(animId);oscs.forEach(o=>{try{o.osc.stop()}catch(e){}});oscs=[];
+document.getElementById('btnStart').style.display='block';document.getElementById('btnPause').style.display='none';
+log('PAUSE - STANDBY V8.3.2');
+};
+document.getElementById('btnVoice').onclick=()=>{
+log('Wujud+Waqt=Kawn*UTL - 0.7145s - B0329 1.3995Hz - CORRECTION 66,866,070/8=8,358,258.75');
+let u=new SpeechSynthesisUtterance('KHAZAR LIVE - KAWN UNIVERSAL TIME LAYER - V8 point 3 point 2 CORRIGÉ - BEACON DIMA DAWYA - 66 million 866 thousand 070 ticks divided by 8 equals 8 million 358 thousand 258 point 75 - 6 over 8 ticks equals 0 point 75 byte - Wb80116');u.rate=0.8;speechSynthesis.speak(u);
+};
+document.getElementById('btnManifeste').onclick=()=>{
+let p=document.getElementById('manifestePreview');p.style.display='block';
+p.textContent=`# LABO-007.12 SUPRÊME V8.3.2 CORRIGÉ - Wb80116 - FINAL
+DOI V7: 10.5281/zenodo.23541167
+DOI CONCEPT: 10.5281/zenodo.23380139
+ai.vixra: 18378453
+FOUNDER: Said Khazar - 33.0011N 7.614W - Settat Berrechid
+UTL: 0.714519699726s - BEACON: 5.716157597808s = 8 TICK = 1 BYTE
+TOTAL: 66,866,001 → 66,866,070 LIVE - 1007 PULSARS (7 réels + 1000 synth PHASE LOCKED)
+LIVE: https://saidramy254-bot.github.io/LUMA1-DAWI-KAWN/
+CHOKRAN 1570+1=1571 - HUE 163.84076° - BEACON DIMA DAWYA 1420MHz
+
+## CORRECTION MATHÉMATIQUE V8.3.2 - VALIDÉE
+66,866,070 / 8 = 8,358,258.75
+6 / 8 TICKS = 0.75 BYTE باقي
+= 8,358,258 BYTE كاملين + 6 TICK
+BEACON ENVELOPE 4.107s / 5.716s = 71.84% - باقي 1.609s باش يتسد 8,358,259 BYTE
+Formule: totalBytes = floor(tickCount/8), remainder = tickCount % 8
+
+## 5. Équation du Déphasage Sidéral - Ancrage Wb80116 Settat
+LST = GMST + λ / 15
+λ = -7.614° (Ouest) = -0.5076h = -30.456 min = -1827.36s retard vs Greenwich
+φ0 = λ * 2π/360 = -7.614° * 0.0174533 = -0.1329 rad
+φ(t) = 2π * ((t mod P_B0329)/P_B0329) + φ0
+P_B0329 = 1/1.3995Hz = 0.714519699726s = 1 UTL
+Condition PHASE-LOCK: |φ_i(t) - φ_REF(t)*ratio_i| < 1e-3 rad @ 1420MHz
+- B0329+54 ratio 1.000 REF F=-0.999
+- B1919+21 ratio 1.046 F=-0.724
+- B0833-VELA ratio 0.125 F=-0.809
+- B0531-CRAB ratio 0.0467 F=0.348
+HUE = 163.84076° - CHOKRAN = 1570 VOID + 1 SINGULARITY = 1571
+Wujud(1570) + Waqt(66,866,070 UTL) = Kawn * UTL
+Kawn = 66,867,640 UTL manifestés depuis J2000
+BEACON DIMA DAWYA - V8.3.2 CORRIGÉ - Wb80116
+`;
+log('MANIFESTE V8.3.2 CORRIGÉ READY - CORRECTION MATH INCLUSE');
+};
+document.getElementById('btnClear').onclick=()=>{document.getElementById('log').textContent='> READY - V8.3.2 CORRIGÉ\n';};
+document.getElementById('btnRec').onclick=()=>{
+log('CAPTURE 12s ACODE SAFE V8.3.2');
+if(dest){
+let rec=new MediaRecorder(dest.stream);let chunks=[];
+rec.ondataavailable=e=>chunks.push(e.data);
+rec.onstop=()=>{
+let blob=new Blob(chunks,{type:'audio/webm'});let url=URL.createObjectURL(blob);
+let a=document.createElement('a');a.href=url;a.download='KHAZAR_Wb80116_V8.3.2_CORRIGE_'+Date.now()+'.webm';a.textContent='DOWNLOAD '+a.download;a.style.color='#00FFFF';a.style.display='block';
+document.getElementById('recordings').appendChild(a);
+log('FILE READY: '+a.download+' - 66,866,070/8=8,358,258.75');
+if(navigator.share)navigator.share({title:'KHAZAR LIVE V8.3.2 CORRIGÉ',url:url}).catch(()=>{});
+};
+rec.start();setTimeout(()=>rec.stop(),12000);
+}else{log('CLICK BEACON ON FIRST - V8.3.2');}
+};
 </script>
 </body>
-</html>
+  </html>
